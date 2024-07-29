@@ -38,7 +38,7 @@ To install requirements:
 <!-- >📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc... -->
 
 
-## Dataset - MOCHEG
+## Dataset - Ameli
 
 You can download dataset here:
 
