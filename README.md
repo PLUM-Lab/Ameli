@@ -33,6 +33,13 @@ Please use the following citation:
 ## Requirements
 
 To install requirements:
+
+```
+conda create -n ameli -y python=3.8 && conda activate ameli
+conda install pytorch==1.9.0 torchvision==0.10.0 torchaudio==0.9.0 cudatoolkit=11.3 -c pytorch -c conda-forge
+pip install -U "ray[default]"
+pip install -r requirements.txt
+```
  
 
 <!-- >📋  Describe how to set up the environment, e.g. pip/conda/docker commands, download datasets, etc... -->
@@ -47,25 +54,35 @@ You can download dataset here:
 - Dataset Format and structure are explained in Section K.3 Dataset Format in Appendix of our paper (https://aclanthology.org/2024.eacl-long.172).
 
 ## Pre-trained Models
-
+[checkpoint](http://nlplab1.cs.vt.edu/~menglong/project/multimodal/entity_linking/ameli/checkpoint/)
  
 ## Evaluation
+```console
+python entity_disambiguation_v2.py --mode=test --checkpoint_dir=#PATH_TO_CHECKPOINT
+```
 
- 
+## Troubleshooting
+
+If some modules cannot be found, preface the python command with `PYTHONPATH=.` 
  
 -----------------------------------------------------------------------------------------
 
 
 ## Training (Optional)
-
+```console
+ 
+python entity_disambiguation_v2.py --candidate_mode=standard --dataset_class=v3 --model_attribute=B6 --lr=0.001 --batch_size=32 --train_dir=#PATH
+python entity_disambiguation_v2.py --candidate_mode=standard   --model_attribute=A6 --lr=0.001 --batch_size=32  --train_dir=#PATH
+ 
+```
  
 <!-- 
 >📋  Describe how to train the models, with example commands on how to train the models in your paper, including the full training procedure and appropriate hyperparameters. -->
 
 ## Dataset Build (Optional)
-
+TODO
  
-
+Note: We will try to clean the code to make it easy to run and understand later. 
 <!-- ## Results
 
 Our model achieves the following performance on :
