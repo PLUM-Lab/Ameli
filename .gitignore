@@ -1,1 +1,5 @@
-attribute/__pycache__/attribution_extraction.cpython-39.pyc
+attribute/__pycache__/*.pyc
+dataset_construction/bestbuy/src/__pycache__/*.pyc
+*.pyc
+dataset_construction/bestbuy/src/object_detect/groundingdino/*.so
+
